@@ -1,0 +1,83 @@
+
+#插件browsermob_path路徑
+browsermob_path: /Users/sai/Desktop/browsermob-proxy-2.1.4/bin/browsermob-proxy
+
+#JAVA API URL
+java_api_url:
+  post:
+    addWithDwLink: https://fastload.qcgamer.com/admin/ghostPost/addWithDwLink
+    addWithTorrent: https://fastload.qcgamer.com/admin/ghostPost/addWithTorrent
+  get:
+    isPostExisted: https://fastload.qcgamer.com/admin/ghostPost/isPostExisted?articleId={}&source={}
+
+#資料庫
+datasource:
+  host: localhost
+  port: 13306
+  username: root
+  password: oh_my_ody!
+  database: crawler
+
+#redis
+redis:
+  password: 123456
+  url: localhost
+  port: 6379
+
+
+#上傳空間資訊
+uploader:
+  mega:
+    email: 'jwt5678-ph@bobi.homes'
+    password: '!LUhQhWX686jYvk'
+  dropbox:
+
+  pcloud:
+    email: 'jwt5678-ph@bobi.homes'
+    password: 'Aa12345678'
+    endpoint: 'eapi'
+
+#爬蟲設定
+spank_bang:
+  open: false
+  memory: 500*1024*1024 #設定內存大小500M
+  rlimit_cpu_time: 259200 #(秒)
+  cycle_time: 5 #每次循環間隔時間(秒)
+  set_file_size_mb: 512000 # 設定檔案大小設定(KB)
+  upload_file_path: '/spank_bang_seed' # 上傳的路徑(上傳空間的路徑)
+  try_content_pag: 5 # 內容頁的嘗試次數
+  current_directory: ./web/mp4 # 下載檔案路徑
+
+
+pornhub:
+  open: false
+  mp4_dir: ./web/mp4
+
+nineone_porn:
+  open: false
+  tmp_dir: ./web/videoTmp
+  mp4_dir: ./web/mp4
+
+xvideo:
+  open: false
+
+
+t66y:
+  open: false
+  cycles: 2  # 每次幾頁
+  sleep_time_min: 10 # 設定每次最少的隨機時間
+  sleep_time_mix:  15 # 設定每次最多的隨機時間
+  current_directory: ./web/bt # 下載檔案路徑
+
+xnxx:
+  open: true
+  upload_space_name: dropbox #上傳空間的名字
+  upload_file_path: '/xnxx' # 上傳的路徑(上傳空間的路徑)
+  current_directory: ./web/mp4 # 下載檔案路徑
+  set_file_size_mb: 512000 # 設定檔案大小設定(KB)
+
+
+youporn:
+  upload_file_path: '/youporn' # 上傳的路徑(上傳空間的路徑)
+  open: true
+  mp4_dir: ./web/mp4
