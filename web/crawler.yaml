@@ -31,7 +31,7 @@ uploader:
     email: 'jwt5678-ph@bobi.homes'
     password: '!LUhQhWX686jYvk'
   dropbox:
-
+    access_token: ''
   pcloud:
     email: 'jwt5678-ph@bobi.homes'
     password: 'Aa12345678'
