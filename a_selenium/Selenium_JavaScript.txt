@@ -1,0 +1,34 @@
+拖动滚动条
+js_ = "document.documentElement.scrollTop=10000"
+driver.execute_script(js_)
+
+修改表单元素的值
+driver.get("http://www.baidu.com")
+js="document.getElementById('kw').value='123'"
+driver.execute_script(js)
+
+修改CSS属性，隐藏百度搜索框
+driver.get("http://www.baidu.com")
+js="document.getElementById('kw').style.display='None'"
+driver.execute_script(js)
+
+返回JavaScript对象，浏览器UA
+js="return window.navigator.userAgent"
+UA =driver.execute_script(js)
+print(UA)
+
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0
+
+获取某元素的HTML
+driver.get("http://www.baidu.com")
+js="return document.getElementById('s-top-left').innerHTML"
+html =driver.execute_script(js)
+print(repr(html))
+
+注入jQuery
+driver.get("http://www.baidu.com")
+js1 = "var newScript = document.createElement('script');newScript.src = 'https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js';"
+js2 = "return $('.s-top-left').text()"
+driver.execute_script(js1)
+text = driver.execute_script(js2)
+print(text)
